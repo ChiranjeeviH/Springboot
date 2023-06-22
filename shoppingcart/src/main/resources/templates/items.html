@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Item details are</title>
+</head>
+<body>
+<h1>Item Details:</h1>
+<table border="1">
+<tr>
+<th bgcolor="Red">Item name</th>
+<th bgcolor="Red">Item price</th>
+</tr>
+<tr th:each="item:${items}">
+<th bgcolor="Green"  th:text="${item.getItemName()}"></th>
+<th  bgcolor="Green" th:text="${item.getItemPrice()}"></th>
+</tr>
+</table>
+</body>
+</html>
